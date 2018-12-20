@@ -1,5 +1,5 @@
 # BookingTableOnline-McDonald
-This repo is my final school project.
+This repo is my final school project.  
 **Description**
  - This project allows user booking table online in an easy way.
  
