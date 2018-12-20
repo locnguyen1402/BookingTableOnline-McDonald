@@ -1,13 +1,13 @@
 # BookingTableOnline-McDonald
 This repo is my final school project.  
-**Description**
+**Description:**
  - This project allows user booking table online in an easy way.  
- **UML:**
+**UML:**
  ![Usecase](https://i.imgur.com/uX8OzvX.png)  
- **Models:**
+**Models:**
  - MVC
  - Client Server  
- **Tools:**  
+**Tools:**  
  - JavaScript, NodeJS, MySQL, Mongoose, SocketIO  
 **_My team**:
 1. Nguyễn Hoàng Anh - 2152174
