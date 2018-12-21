@@ -10,7 +10,7 @@ if (typeof (Worker) !== "undefined") {
     window.addEventListener("scroll", function (event) {
         var top = this.scrollY; // 574
         console.log(top);
-        if (top == 100) {
+        if (top > 39) {
             w.onmessage = (e) => {
                 if (e.data == 'more') {
                     for (let i = 3; i < branches.length; i++) {
