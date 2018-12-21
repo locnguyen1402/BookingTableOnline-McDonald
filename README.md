@@ -1,17 +1,17 @@
-# BookingTableOnline-McDonald
+# BookingTableOnline-McDonald :sparkling_heart:
 This repo is my final school project.  
-**GUIDE:**
+**GUIDE:**:sparkling_heart:  
  - Please, read HOWTOUSE before use it.
-**Description:**
+**Description:**:sparkling_heart:  
  - This project allows user booking table online in an easy way.  
-**UML:**
+**UML:**:sparkling_heart:  
  ![Usecase](https://i.imgur.com/uX8OzvX.png)  
-**Models:**
+**Models:**:sparkling_heart:  
  - MVC
  - Client Server  
-**Tools:**  
+**Tools:**  :sparkling_heart:
  - JavaScript, NodeJS, MySQL, Mongoose, SocketIO  
-**_My team_**:
+**_My team:_**:sparkling_heart:  
 1. Nguyễn Hoàng Anh - 2152174
 2. Nguyễn Tuấn Lộc  - 2152138
 3. Nguyễn Tú Anh    - 2152018
