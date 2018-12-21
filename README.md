@@ -1,5 +1,7 @@
 # BookingTableOnline-McDonald
 This repo is my final school project.  
+**GUIDE:**
+ - Please, read HOWTOUSE before use it.
 **Description:**
  - This project allows user booking table online in an easy way.  
 **UML:**
