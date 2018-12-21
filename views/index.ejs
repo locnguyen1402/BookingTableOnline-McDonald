@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>McDonald Homepage</title>
+  <%- include('./partials/head') %>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Navigation Bar -->
+  <%- include('./partials/index/navbar') %>
+  <!-- End Navigation Bar -->
+
+  <!-- Header -->
+  <header class="w3-display-container w3-content" style="max-width:1500px;">
+    <img class="w3-image" src="../public/images/mcdonal.jpg" alt="McDonald" style="min-width:1000px" width="1500"
+      height="200">
+  </header>
+
+  <br>
+  <br>
+  <!-- Page content -->
+  <%- include('./partials/index/page-content') %>
+  <!-- End Page content -->
+
+  <!-- Footer -->
+  <%- include('./partials/index/footer') %>
+  <!-- End Footer -->
+  <script>
+    $(document).ready(function () {
+      $.datetimepicker.setLocale('en');
+      $('#datetimepicker').datetimepicker();
+    });
+  </script>
+</body>
+
+</html>
