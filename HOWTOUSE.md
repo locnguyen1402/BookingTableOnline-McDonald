@@ -1,4 +1,4 @@
-# BookingTableOnline-McDonald  
+# BookingTableOnline-McDonald :tokyo_tower:  
 ##GUIDE: :sparkling_heart:  
  - After clone repo, you must run **'cd'** go to your folder :cat:
  - run **'npm install'** to install all packages :cat:
