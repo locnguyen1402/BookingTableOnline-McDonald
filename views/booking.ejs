@@ -3,12 +3,83 @@
 
 <head>
     <%- include('./partials/head') %>
+    <link rel="stylesheet" href="../public/stylesheets/booking.css">
     <title>Booking</title>
 </head>
 
 <body>
+
+    <%- include('./partials/booking/form'); -%>
     <%- include('./partials/booking/store'); -%>
     <script src="../public/javascripts/event.js"></script>
+    <!-- popup form jQuery -->
+    <script>
+        // jQuery extend functions for popup
+        (function ($) {
+            $.fn.openPopup = function (settings) {
+                var elem = $(this);
+                // Establish our default settings
+                var settings = $.extend({
+                    anim: 'fade'
+                }, settings);
+                elem.show();
+                elem.find('.popup-content').addClass(settings.anim + 'In');
+            }
+
+            $.fn.closePopup = function (settings) {
+                var elem = $(this);
+                // Establish our default settings
+                var settings = $.extend({
+                    anim: 'fade'
+                }, settings);
+                elem.find('.popup-content').removeClass(settings.anim + 'In').addClass(settings.anim + 'Out');
+
+                setTimeout(function () {
+                    elem.hide();
+                    elem.find('.popup-content').removeClass(settings.anim + 'Out')
+                }, 500);
+            }
+
+        }(jQuery));
+
+        // Click functions for popup
+        $('.open-popup').click(function () {
+            $('#' + $(this).data('id')).openPopup({
+                anim: (!$(this).attr('data-animation') || $(this).data('animation') == null) ? 'fade' :
+                    $(this).data('animation')
+            });
+        });
+        $('.close-popup').click(function () {
+            $('#' + $(this).data('id')).closePopup({
+                anim: (!$(this).attr('data-animation') || $(this).data('animation') == null) ? 'fade' :
+                    $(this).data('animation')
+            });
+        });
+    </script>
+
+    <script>
+        let mcdonald_name = document.querySelectorAll('.mcdonald-name');
+        let mcdonald_address = document.querySelectorAll('.mcdonald-address');
+        let mcdonald_time = document.querySelectorAll('.mcdonald-time');
+
+        let mcdonald_name_form = document.querySelector('#mcdonald-name-form');
+        let mcdonald_address_form = document.querySelector('#mcdonald-address-form');
+        let mcdonald_time_form = document.querySelector('#mcdonald-time-form');
+
+        let popup = document.querySelectorAll('.open-popup');
+        for (let i = 0; i < popup.length; i++) {
+            popup[i].onclick = () => {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 'slow');
+                console.log(mcdonald_name[i].innerHTML, mcdonald_name_form.value);
+                mcdonald_name_form.value = mcdonald_name[i].innerHTML;
+                mcdonald_address_form.value = mcdonald_address[i].innerHTML;
+                mcdonald_time_form.value = mcdonald_time[i].innerHTML;
+                return false;
+            };
+        }
+    </script>
 </body>
 
 </html>
