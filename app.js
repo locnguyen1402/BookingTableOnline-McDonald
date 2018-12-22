@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 // routes
-const indexRouter = require('./routes/index');
+const homepageRouter = require('./routes/homepage');
 const bookingRouter = require('./routes/booking');
 
 // init express constructor
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // run MVC by middleware
-app.use('/', indexRouter);
+app.use('/', homepageRouter);
 app.use('/booking', bookingRouter);
 
 // catch 404 and forward to error handler
