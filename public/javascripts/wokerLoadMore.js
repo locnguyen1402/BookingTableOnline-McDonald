@@ -1,4 +1,4 @@
-console.info('worker created');
+//console.info('worker created');
 self.onmessage = (e) => {
 
     if (e.data == '574') {

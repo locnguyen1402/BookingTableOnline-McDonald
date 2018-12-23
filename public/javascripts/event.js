@@ -9,7 +9,7 @@ if (typeof (Worker) !== "undefined") {
     let w = new Worker("../public/javascripts/wokerLoadMore.js");
     window.addEventListener("scroll", function (event) {
         var top = this.scrollY; // 574
-        console.log(top);
+        //console.log(top);
         if (top > 0) {
             w.onmessage = (e) => {
                 if (e.data == 'more') {

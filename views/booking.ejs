@@ -68,28 +68,64 @@
         };
     </script>
 
-    <script>
+    <script type="module">
+        //list information of store
+        import {store} from '../public/javascripts/store.js';
+
         let mcdonald_name = document.querySelectorAll('.mcdonald-name');
         let mcdonald_address = document.querySelectorAll('.mcdonald-address');
         let mcdonald_time = document.querySelectorAll('.mcdonald-time');
 
         let mcdonald_name_form = document.querySelector('#mcdonald-name-form');
-        let mcdonald_address_form = document.querySelector('#mcdonald-address-form');
         let mcdonald_time_form = document.querySelector('#mcdonald-time-form');
+        let mcdonald_capacity_form = document.querySelector('#mcdonald-capacity-form');
 
+        let btnBooking = document.querySelector('#booking-form');
+        btnBooking.onclick = (()=>{
+            console.log(storeList.filter((el)=>{
+                return el.name == mcdonald_name_form.value;   
+            }));
+        });    
+
+        let select = document.querySelector('#mcdonald-date-form');
         let popup = document.querySelectorAll('.open-popup');
         for (let i = 0; i < popup.length; i++) {
             popup[i].onclick = () => {
                 $('html,body').animate({
                     scrollTop: 0
                 }, 'slow');
-                console.log(mcdonald_name[i].innerHTML, mcdonald_name_form.value);
-                mcdonald_name_form.value = mcdonald_name[i].innerHTML;
-                mcdonald_address_form.value = mcdonald_address[i].innerHTML;
-                mcdonald_time_form.value = mcdonald_time[i].innerHTML;
+                
                 return false;
             };
         }
+
+        //(c-o)*2-1
+        /* let select = document.querySelector('#mcdonald-time-form');
+        let option = document.createElement('OPTION');
+        option.setAttribute('value', '..');
+        let content = document.createTextNode('..');
+        option.appendChild(content);
+        select.appendChild(option);
+        let timeBooking = ((index,open, close)=>{
+            console.log(index);
+            for()
+        }); */
+
+        
+        
+        // xử lý ngày của booking form... chỉ được đặt 3 ngày kế
+        let setDate = () => {
+            let day = new Date();
+            for(let i = 0; i < 3; i++){
+                let option = document.createElement('OPTION');
+                let nextday = new Date(day);
+                nextday.setDate(nextday.getDate()+i);
+                let content = document.createTextNode(nextday.toLocaleDateString());
+                option.appendChild(content);
+                select.appendChild(option);
+            }
+        };
+        setDate();
     </script>
 </body>
 
