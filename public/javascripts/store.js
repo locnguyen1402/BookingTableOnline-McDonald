@@ -61,8 +61,8 @@ export const store = [{
         "name": "McDonald’s Saigon Center",
         "address": "B2 TTTM Saigon Center, 65 Lê Lợi, phường Bến Nghé, Quận 1, Tp Hồ Chí Minh",
         "phone": "(028) 3821 0555",
-        "description": "9:30AM - 10PM",
-        "time_open" : 9.5,
+        "description": "9AM - 10PM",
+        "time_open" : 9,
         "time_close" : 22
     },
     {
@@ -80,7 +80,7 @@ export const store = [{
         "address": "2 Công Xã Paris, Quận 1, Tp Hồ Chí Minh",
         "phone": "(028) 3828 2555",
         "description": "24/7",
-        "time_open" : 7,
+        "time_open" : 0,
         "time_close" : 24
     },
     {
